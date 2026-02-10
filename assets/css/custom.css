@@ -1,23 +1,50 @@
-/* Two-column layout for homepage block */
+/* ===========================
+   1) GLOBAL: make the site wider
+   (affects all pages)
+   =========================== */
+
+/* Increase the main container width */
+.page,
+.masthead__inner-wrap,
+.initial-content {
+  max-width: 1200px;    /* pick 1100 / 1200 / 1400 as you prefer */
+}
+
+/* Increase the inner content column width */
+.page__content {
+  max-width: 1000px;    /* how wide the article/content column becomes */
+}
+
+/* Optional: make the sidebar reasonably sized */
+.sidebar__inner {
+  max-width: 300px;
+}
+
+/* ===========================
+   2) HOMEPAGE: keep the homepage narrower
+   (override only when .home-two-col exists)
+   =========================== */
+
+/* Constrain the homepage content block and center it */
 .home-two-col {
-  display: grid;
-  grid-template-columns: 1.6fr 1fr;
-  gap: 32px;
-  align-items: center;
-  margin-top: 12px;
+  max-width: 900px;     /* pick the homepage width you want */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 12px;   /* optional breathing room */
+  padding-right: 12px;
 }
 
-.home-col-photo img {
-  width: 100%;
-  max-width: 440px;
-  height: auto;
-  border-radius: 18px;
-  display: block;
+/* Ensure the homepage content column does not inherit the wider .page__content */
+.home-two-col .home-col-text,
+.home-two-col .home-col-photo {
+  max-width: none;
 }
 
-/* Mobile: stack */
+/* Mobile still stacks nicely */
 @media (max-width: 900px) {
+  .page,
+  .page__content,
   .home-two-col {
-    grid-template-columns: 1fr;
+    max-width: 100%;
   }
 }
