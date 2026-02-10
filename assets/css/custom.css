@@ -1,6 +1,3 @@
-/* DEBUG: if you don't see a red line at the top, custom.css is not loading */
-body { border-top: 8px solid red; }
-
 /* Two-column layout for homepage block */
 .home-two-col {
   display: grid;
