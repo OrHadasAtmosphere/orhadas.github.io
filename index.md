@@ -1,6 +1,7 @@
 ---
-layout: page
+layout: single
 title: Home
+author_profile: true
 ---
 
 <img src="{{ site.baseurl }}/assets/img/20176F053.jpg" alt="Or Hadas" width="220" style="border-radius: 50%; margin-bottom: 20px;">
