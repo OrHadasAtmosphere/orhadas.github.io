@@ -4,17 +4,22 @@ title: Home
 author_profile: false
 ---
 
-
-<div class="home-intro">
-  <img class="home-photo" src="{{ site.baseurl }}/assets/img/20176F053.jpg" alt="Or Hadas">
-  <div class="home-text">
+<div class="home-two-col">
+  <div class="home-col-text">
     <h2>Or Hadas</h2>
     <p>
       I am an atmospheric scientist studying large-scale atmospheric dynamics, with a focus on storms, jets, and climate.
       I recently completed my PhD at the Weizmann Institute of Science.
     </p>
     <p>
+      My research combines theory, idealized models, and machine learning to understand variability and predictability in the climate system.
+    </p>
+    <p>
       <a href="{{ site.baseurl }}/publications/">Publications</a>
     </p>
+  </div>
+
+  <div class="home-col-photo">
+    <img src="{{ site.baseurl }}/assets/img/20176F053.jpg" alt="Or Hadas">
   </div>
 </div>
