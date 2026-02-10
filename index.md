@@ -14,9 +14,6 @@ author_profile: true
     <p>
       My research combines theory, idealized models, reanalysis data, observations, and machine learning to understand the basic mechanisms driving the midlatitude climate.
     </p>
-    <p>
-      <a href="{{ site.baseurl }}/publications/">Publications</a>
-    </p>
   </div>
 
   <div class="home-col-photo">
