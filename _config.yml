@@ -10,15 +10,13 @@ author:
   name: Or Hadas
   avatar: /assets/img/20176F053.jpg
   bio: Atmospheric scientist studying storms, jets, and climate
-
-links:
-  - label: "Google Scholar"
-    icon: "fas fa-graduation-cap"
-    url: "https://scholar.google.co.il/citations?user=gYHd_jcAAAAJ"
-
-  - label: "LinkedIn"
-    icon: "fab fa-linkedin"
-    url: "https://www.linkedin.com/in/or-hadas-214048193/"
+  links:
+    - label: "Google Scholar"
+      icon: "fas fa-graduation-cap"
+      url: "https://scholar.google.co.il/citations?user=gYHd_jcAAAAJ"
+    - label: "LinkedIn"
+      icon: "fab fa-linkedin"
+      url: "https://www.linkedin.com/in/or-hadas-214048193/"
 
 header_pages:
   - index.md
