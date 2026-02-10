@@ -9,7 +9,7 @@ baseurl: ""                       # keep empty unless this is a project site
 author:
   name: Or Hadas
   avatar: /assets/img/20176F053.jpg
-  bio: Atmospheric scientist studying storms, jets, and climate
+  bio: Atmospheric scientist studying midlatitude climate dynamics
   links:
     - label: "Google Scholar"
       icon: "fas fa-graduation-cap"
