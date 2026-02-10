@@ -11,7 +11,7 @@ author:
   avatar: /assets/img/20176F053.jpg
   bio: Atmospheric scientist studying midlatitude climate dynamics
   links:
-      - label: "CV"
+    - label: "CV"
       icon: "fas fa-file-pdf"
       url: "/assets/files/CV_Or_Hadas.pdf"
     - label: "Google Scholar"
