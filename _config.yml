@@ -1,5 +1,12 @@
 remote_theme: mmistakes/minimal-mistakes
 plugins:
   - jekyll-include-cache
-title: Or Hadas's homepage
-description: Slowly, this website will build up
+title: Or Hadas
+description: Atmospheric dynamics, storms, jets, and climate
+url: https://orhadas.github.io   # change USERNAME
+baseurl: ""                       # keep empty unless this is a project site
+
+author:
+  name: Or Hadas
+  avatar: /assets/img/20176F053.jpg
+  bio: Atmospheric scientist studying storms, jets, and climate
