@@ -5,12 +5,13 @@ permalink: /publications/
 author_profile: true
 ---
 
-### The asymmetry of vertical velocity in current and future climate
+## Fundamentals of midlatitude dynamics
 
-**Talia Tamarin-Brodsky, Or Hadas**  
-*Geophys. Res. Lett.*, **46**(1), 374–382, 2019  
-[DOI](https://doi.org/10.1029/2018GL080363)  
-*Equal contributors*
+### A Lagrangian perspective on the growth of midlatitude storms
+
+**Or Hadas, Yohai Kaspi**  
+*AGU Adv.*, **6**(3), e2024AV001555, 2025  
+[DOI](https://doi.org/10.1029/2024AV001555)
 
 ---
 
@@ -22,19 +23,22 @@ author_profile: true
 
 ---
 
+### The asymmetry of vertical velocity in current and future climate
+
+**Talia Tamarin-Brodsky, Or Hadas**  
+*Geophys. Res. Lett.*, **46**(1), 374–382, 2019  
+[DOI](https://doi.org/10.1029/2018GL080363)  
+*Equal contributors*
+
+---
+
+## Midlatitude Clouds–Circulation Coupling
+
 ### The role of baroclinic activity in controlling Earth’s albedo in the present and future climates
 
 **Or Hadas, George Datseris, Joaquin Blanco, Sandrine Bony, Rodrigo Caballero, Bjorn Stevens, Yohai Kaspi**  
 *P. Natl. Acad. Sci.*, **120**(5), e2208778120, 2023  
 [DOI](https://doi.org/10.1073/pnas.2208778120)
-
----
-
-### Minimal recipes for global cloudiness
-
-**George Datseris, Joaquin Blanco, Or Hadas, Sandrine Bony, Rodrigo Caballero, Yohai Kaspi, Bjorn Stevens**  
-*Geophys. Res. Lett.*, **49**(20), e2022GL099678, 2022  
-[DOI](https://doi.org/10.1029/2022GL099678)
 
 ---
 
@@ -46,6 +50,24 @@ author_profile: true
 
 ---
 
+### Minimal recipes for global cloudiness
+
+**George Datseris, Joaquin Blanco, Or Hadas, Sandrine Bony, Rodrigo Caballero, Yohai Kaspi, Bjorn Stevens**  
+*Geophys. Res. Lett.*, **49**(20), e2022GL099678, 2022  
+[DOI](https://doi.org/10.1029/2022GL099678)
+
+---
+
+## Machine Learning
+
+### Quantifying the influence of climate on storm activity using machine learning
+
+**Or Hadas, Yohai Kaspi**  
+*Geophys. Res. Lett.*, **53**, e2025GL118496, 2026  
+[DOI](https://doi.org/10.1029/20)
+
+---
+
 ### Predictability of storms in an idealized climate revealed by machine learning
 
 **Wuqiushi Yao, Or Hadas, Yohai Kaspi**  
@@ -53,10 +75,5 @@ author_profile: true
 [DOI](https://doi.org/10.1029/2025GL118886)  
 *Equal contribution; supervised the research*
 
----
 
-### Quantifying the influence of climate on storm activity using machine learning
 
-**Or Hadas, Yohai Kaspi**  
-*Geophys. Res. Lett.*, **53**, e2025GL118496, 2026  
-[DOI](https://doi.org/10.1029/20)
