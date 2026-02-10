@@ -62,7 +62,7 @@ George Datseris, Joaquin Blanco, **Or Hadas**, Sandrine Bony, Rodrigo Caballero,
 
 ### Quantifying the influence of climate on storm activity using machine learning
 
-**Or Hadas**, Yohai Kaspi 
+**Or Hadas**, Yohai Kaspi  
 *Geophys. Res. Lett.*, **53**, e2025GL118496, 2026  
 [DOI](https://doi.org/10.1029/20)
 
