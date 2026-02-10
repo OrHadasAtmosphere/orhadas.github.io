@@ -1,50 +1,72 @@
-/* ===========================
-   1) GLOBAL: make the site wider
-   (affects all pages)
-   =========================== */
+/* DEBUG: confirms custom.css is loading */
+body { border-top: 8px solid red; }
 
-/* Increase the main container width */
-.page,
+/* =========================================
+   1) Widen the site safely (all pages)
+   Minimal-mistakes uses a wrapper container.
+   This is the safest width override.
+   ========================================= */
+
 .masthead__inner-wrap,
-.initial-content {
-  max-width: 1200px;    /* pick 1100 / 1200 / 1400 as you prefer */
+.initial-content,
+.page__footer .page__footer-follow,
+.page__footer footer {
+  max-width: 1200px;     /* overall site width */
 }
 
-/* Increase the inner content column width */
+/* Make the main text column a bit wider */
 .page__content {
-  max-width: 1000px;    /* how wide the article/content column becomes */
+  max-width: 1000px;
 }
 
-/* Optional: make the sidebar reasonably sized */
+/* Optional: keep sidebar reasonable */
 .sidebar__inner {
   max-width: 300px;
 }
 
-/* ===========================
-   2) HOMEPAGE: keep the homepage narrower
-   (override only when .home-two-col exists)
-   =========================== */
+/* =========================================
+   2) Homepage: two-column layout (only on index.md)
+   This restores your working two-column grid.
+   ========================================= */
 
-/* Constrain the homepage content block and center it */
 .home-two-col {
-  max-width: 900px;     /* pick the homepage width you want */
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 32px;
+  align-items: center;
+  margin-top: 12px;
+
+  /* homepage specific width */
+  max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 12px;   /* optional breathing room */
+  padding-left: 12px;
   padding-right: 12px;
 }
 
-/* Ensure the homepage content column does not inherit the wider .page__content */
-.home-two-col .home-col-text,
-.home-two-col .home-col-photo {
-  max-width: none;
+.home-col-photo img {
+  width: 100%;
+  max-width: 440px;
+  height: auto;
+  border-radius: 18px;
+  display: block;
 }
 
-/* Mobile still stacks nicely */
+/* Mobile: stack */
 @media (max-width: 900px) {
-  .page,
-  .page__content,
   .home-two-col {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+
+  .page__content {
+    max-width: 100%;
+  }
+
+  .masthead__inner-wrap,
+  .initial-content,
+  .page__footer .page__footer-follow,
+  .page__footer footer {
     max-width: 100%;
   }
 }
