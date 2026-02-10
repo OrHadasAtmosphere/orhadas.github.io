@@ -2,6 +2,7 @@
 layout: single
 title: Publications
 permalink: /publications/
+author_profile: true
 ---
 
 ### The asymmetry of vertical velocity in current and future climate
