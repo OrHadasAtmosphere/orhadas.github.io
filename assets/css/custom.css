@@ -1,6 +1,6 @@
 /* Increase overall content width */
 .page,
 .masthead__inner-wrap,
-.page__content {
-  max-width: 900px;
+.initial-content {
+  max-width: 1200px;
 }
