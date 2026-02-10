@@ -1,14 +1,10 @@
-/* Increase overall content width */
-.page,
-.masthead__inner-wrap,
-.initial-content {
-  max-width: 1200px;
-}
+/* DEBUG: if you don't see a red line at the top, custom.css is not loading */
+body { border-top: 8px solid red; }
 
-/* Two-column layout for homepage only */
+/* Two-column layout for homepage block */
 .home-two-col {
   display: grid;
-  grid-template-columns: 1.4fr 1fr;
+  grid-template-columns: 1.6fr 1fr;
   gap: 32px;
   align-items: center;
   margin-top: 12px;
@@ -16,7 +12,7 @@
 
 .home-col-photo img {
   width: 100%;
-  max-width: 420px;
+  max-width: 440px;
   height: auto;
   border-radius: 18px;
   display: block;
@@ -27,9 +23,4 @@
   .home-two-col {
     grid-template-columns: 1fr;
   }
-
-  .home-col-photo img {
-    max-width: 360px;
-  }
 }
-
