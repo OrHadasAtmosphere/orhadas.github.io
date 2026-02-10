@@ -1,7 +1,7 @@
 ---
 layout: single
 title: Home
-author_profile: false
+author_profile: true
 ---
 
 <div class="home-two-col">
