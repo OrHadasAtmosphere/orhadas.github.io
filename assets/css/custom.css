@@ -4,3 +4,36 @@
 .initial-content {
   max-width: 1200px;
 }
+
+/* Homepage photo next to text (only affects the block on index.md) */
+.home-intro {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.home-photo {
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 18px;
+  flex: 0 0 auto;
+}
+
+.home-text h2 {
+  margin-top: 0;
+}
+
+/* Mobile friendly */
+@media (max-width: 800px) {
+  .home-intro {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .home-photo {
+    width: min(360px, 100%);
+    height: auto;
+  }
+}
