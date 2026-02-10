@@ -48,7 +48,7 @@ author_profile: true
 
 ### Predictability of storms in an idealized climate revealed by machine learning
 
-**Wenwen Yao, Or Hadas, Yohai Kaspi**  
+**Wuqiushi Yao, Or Hadas, Yohai Kaspi**  
 *Geophys. Res. Lett.*, **53**, e2025GL118886, 2026  
 [DOI](https://doi.org/10.1029/2025GL118886)  
 *Equal contribution; supervised the research*
