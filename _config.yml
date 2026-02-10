@@ -1,3 +1,5 @@
-theme: jekyll-theme-minimal
+remote_theme: mmistakes/minimal-mistakes
+plugins:
+  - jekyll-include-cache
 title: Or Hadas's homepage
 description: Slowly, this website will build up
