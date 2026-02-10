@@ -10,3 +10,7 @@ author:
   name: Or Hadas
   avatar: /assets/img/20176F053.jpg
   bio: Atmospheric scientist studying storms, jets, and climate
+
+header_pages:
+  - index.md
+  - publications.md
