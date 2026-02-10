@@ -6,7 +6,7 @@ author_profile: false
 
 
 <div class="home-intro">
-  <img class="home-photo" src="{{ site.baseurl }}/assets/img/profile.jpg" alt="Or Hadas">
+  <img class="home-photo" src="{{ site.baseurl }}/assets/img/20176F053.jpg" alt="Or Hadas">
   <div class="home-text">
     <h2>Or Hadas</h2>
     <p>
