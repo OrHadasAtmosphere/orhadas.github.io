@@ -7,16 +7,23 @@ body { border-top: 8px solid red; }
    This is the safest width override.
    ========================================= */
 
+/* =========================================
+   1) Widen + CENTER the site (all pages)
+   ========================================= */
+
 .masthead__inner-wrap,
 .initial-content,
 .page__footer .page__footer-follow,
 .page__footer footer {
-  max-width: 1200px;     /* overall site width */
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Make the main text column a bit wider */
 .page__content {
-  max-width: 1000px;
+  max-width: none;
 }
 
 /* Optional: keep sidebar reasonable */
