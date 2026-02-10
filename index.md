@@ -8,11 +8,11 @@ author_profile: true
   <div class="home-col-text">
     <h2>Or Hadas</h2>
     <p>
-      I am an atmospheric scientist studying large-scale atmospheric dynamics, with a focus on storms, jets, and climate.
+      I am an atmospheric scientist studying midlatitude climate dynamics, with a focus on interactions across spatial and temporal scales.
       I recently completed my PhD at the Weizmann Institute of Science.
     </p>
     <p>
-      My research combines theory, idealized models, and machine learning to understand variability and predictability in the climate system.
+      My research combines theory, idealized models, reanalysis data, observations, and machine learning to understand the basic mechanisms driving the midlatitude climate.
     </p>
     <p>
       <a href="{{ site.baseurl }}/publications/">Publications</a>
