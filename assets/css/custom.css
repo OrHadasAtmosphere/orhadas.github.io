@@ -1,5 +1,5 @@
 /* DEBUG: confirms custom.css is loading */
-body { border-top: 8px solid red; }
+/* body { border-top: 8px solid red; }*/
 /* Global base font size */
 body {
   font-size: 18px;   /* try 17px, 18px, or 19px */
