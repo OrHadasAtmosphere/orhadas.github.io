@@ -3,7 +3,7 @@ plugins:
   - jekyll-include-cache
 title: Or Hadas
 description: Atmospheric dynamics, storms, jets, and climate
-url: https://orhadas.github.io   # change USERNAME
+url: https://orhadasatmosphere.github.io   # change USERNAME
 baseurl: ""                       # keep empty unless this is a project site
 
 author:
