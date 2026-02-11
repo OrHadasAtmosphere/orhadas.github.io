@@ -25,3 +25,6 @@ header_pages:
   - index.md
   - research.md
   - publications.md
+  
+toc: false
+toc_sticky: false
