@@ -176,3 +176,15 @@
     max-width: 100%;
   }
 }
+
+.initial-content {
+  max-width: 1200px;   /* try 1100–1300px */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.masthead__inner-wrap {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
