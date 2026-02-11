@@ -35,18 +35,14 @@
 
 /* One-column text block */
 .content-onecol {
-  max-width: 900px;
-  margin: 0 0 28px 0;
-  padding-right: 6px;
+  max-width: none;
+  width: 100%;
 }
 
 /* Two-column block: left text, right image */
 .content-twocol {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: 28px;
-  align-items: center;
-  margin: 0 0 28px 0;
+  max-width: none;
+  width: 100%;
 }
 
 /* Reverse variant (image left, text right) */
@@ -58,7 +54,6 @@
 .content-twocol img {
   width: 100%;
   height: auto;
-  max-width: 520px;
   border-radius: 12px;
   display: block;
 }
