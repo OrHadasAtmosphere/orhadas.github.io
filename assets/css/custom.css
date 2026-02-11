@@ -1,43 +1,30 @@
 /* DEBUG: confirms custom.css is loading */
-/* body { border-top: 8px solid red; }*/
-/* Global base font size */
-body {
-  font-size: 18px;   /* try 17px, 18px, or 19px */
-}
+/* body { border-top: 8px solid red; }  <-- keep commented or remove */
 
 /* =========================================
-   1) Widen the site safely (all pages)
-   Minimal-mistakes uses a wrapper container.
-   This is the safest width override.
-   ========================================= */
-
-/* =========================================
-   1) Widen + CENTER the site (all pages)
+   1) Widen + center the site (all pages)
    ========================================= */
 
 .masthead__inner-wrap,
-.initial-content,
-.page__footer .page__footer-follow,
-.page__footer footer {
+.initial-content {
   width: 100%;
-  max-width: none;
+  max-width: 1500px;   /* adjust this single number if you want overall width wider/narrower */
   margin-left: auto;
   margin-right: auto;
 }
 
-/* Make the main text column a bit wider */
+/* Let theme control text sizing; do not override font-size here */
 .page__content {
   max-width: none;
 }
 
 /* Optional: keep sidebar reasonable */
 .sidebar__inner {
-  max-width: 300px;
+  max-width: 320px;
 }
 
 /* =========================================
-   2) Homepage: two-column layout (only on index.md)
-   This restores your working two-column grid.
+   2) Homepage two-column layout (only on index.md)
    ========================================= */
 
 .home-two-col {
@@ -47,7 +34,6 @@ body {
   align-items: center;
   margin-top: 12px;
 
-  /* homepage specific width */
   max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
@@ -75,73 +61,87 @@ body {
   }
 
   .masthead__inner-wrap,
-  .initial-content,
-  .page__footer .page__footer-follow,
-  .page__footer footer {
+  .initial-content {
     max-width: 100%;
   }
 }
 
-/* ===============================
-   Full-width modern research page
-   =============================== */
-
+/* ======= Full-bleed research sections (edge-to-edge) ======= */
+/* This pulls the section out of the centered container so it spans the viewport */
 .research-section {
-  width: 100%;
-  margin-top: 60px;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+  box-sizing: border-box;
+  padding: 40px 24px; /* vertical and small horizontal padding for breathing room */
+  background: transparent; /* change if you want a subtle background */
 }
 
-/* Each block */
+/* ======= Block layout (less dense) ======= */
 .research-block {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
-  gap: 80px;
+  gap: 40px;
   align-items: center;
-  padding: 80px 0;
-  border-bottom: 1px solid #eee;
+  padding: 40px 0;
+  border-bottom: 1px solid #efefef;
+  max-width: 1200px;    /* keeps content column readable on very wide screens */
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Alternate layout */
+/* Alternate the visual/text order cleanly */
 .research-block.reverse {
   grid-template-columns: 1fr 1.2fr;
 }
-
 .research-block.reverse .research-content {
   order: 2;
 }
-
 .research-block.reverse .research-visual {
   order: 1;
 }
 
-/* Text styling */
+/* ======= Use theme typography (no font-size overrides) ======= */
+/* We keep spacing only; font sizes remain uniform across the site */
+/* Keep headings' spacing tidy */
 .research-content h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
+  line-height: 1.25;
 }
 
+/* Paragraph spacing; font-size inherits from theme */
 .research-content p {
-  font-size: 1.05rem;
-  line-height: 1.7;
-  margin-bottom: 16px;
-  max-width: 650px;
+  margin-bottom: 12px;
+  color: #222;
+  max-width: 720px;     /* limit line length for readability */
 }
 
-/* Image styling */
+/* ======= Image adjustments ======= */
 .research-visual img {
   width: 100%;
-  max-width: 500px;
-  border-radius: 20px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  max-width: 420px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Mobile layout */
+/* ======= Responsive: stack and maintain padding ======= */
 @media (max-width: 1000px) {
+  .research-section {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
   .research-block,
   .research-block.reverse {
     grid-template-columns: 1fr;
-    gap: 40px;
-    padding: 60px 0;
+    gap: 24px;
+    padding: 28px 0;
   }
 
   .research-block.reverse .research-content,
@@ -149,7 +149,16 @@ body {
     order: unset;
   }
 
+  .research-content h2 {
+    /* keep the theme's responsive sizing; avoid setting font-size */
+    line-height: 1.2;
+  }
+
   .research-content p {
+    max-width: 100%;
+  }
+
+  .research-visual img {
     max-width: 100%;
   }
 }
