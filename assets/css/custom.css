@@ -14,6 +14,10 @@
   padding-left: 0px;
 }
 
+/* Sidebar column width */
+.sidebar {
+ width: 200px;   /* try 220–260px */
+}
 
 .masthead__inner-wrap,
 .initial-content {
