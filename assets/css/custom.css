@@ -4,6 +4,16 @@
 /* =========================================
    1) Widen + center the site (all pages)
    ========================================= */
+/* Reduce left padding in sidebar */
+.sidebar {
+  padding-left: 10px;   /* try 0px–15px */
+}
+
+/* Reduce inner padding around profile block */
+.sidebar__inner {
+  padding-left: 0px;
+}
+
 
 .masthead__inner-wrap,
 .initial-content {
