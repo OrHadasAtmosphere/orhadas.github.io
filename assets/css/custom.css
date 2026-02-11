@@ -1,87 +1,33 @@
-/* ===== Site layout: sidebar + content column ===== */
-
-.initial-content,
-.masthead__inner-wrap {
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
-  box-sizing: border-box;
+/* 1) Wide content + small margins (apply by adding `classes: wide-tight` in front matter) */
+.wide-tight .page__inner-wrap,
+.wide-tight .initial-content,
+.wide-tight .page__content {
+  max-width: 1600px;   /* make bigger/smaller if you want */
+  width: 96%;
 }
 
-/* Sidebar sizing */
-.sidebar {
-  width: 220px;           /* change 200-260px as desired */
-  padding-left: 8px;
-}
-.sidebar__inner {
-  padding-left: 6px;
+.wide-tight .page__content {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
-/* Page grid: sidebar | main content */
-@media (min-width: 1024px) {
-  .page {
-    display: grid;
-    grid-template-columns: 220px 1fr;
-    gap: 36px;
-  }
+/* 2) Two-column block (apply by adding `classes: two-col` AND using the HTML wrapper in the page) */
+.two-col .page__content .two-col-wrap {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr; /* text column, image column */
+  gap: 1.25rem;
+  align-items: start;
 }
 
-/* Ensure content column is free to use full width */
-.page__content {
-  max-width: none;
-}
-
-/* ===== Content styles you can use inside the main column ===== */
-
-/* One-column text block */
-.content-onecol {
-  max-width: none;
-  width: 100%;
-}
-
-/* Two-column block: left text, right image */
-.content-twocol {
-  max-width: none;
-  width: 100%;
-}
-
-/* Reverse variant (image left, text right) */
-.content-twocol.reverse {
-  grid-template-columns: 1fr 1.4fr;
-}
-
-/* Two-column image styling */
-.content-twocol img {
+.two-col .two-col-media img {
   width: 100%;
   height: auto;
-  border-radius: 12px;
   display: block;
 }
 
-/* Keep text readable */
-.content-onecol p,
-.content-twocol .text {
-  margin-bottom: 1rem;
-  line-height: 1.6;
-  color: #222;
-}
-
-/* Responsive: stack on small screens */
-@media (max-width: 1023px) {
-  .page {
-    display: block;
-  }
-  .content-twocol,
-  .content-twocol.reverse {
+/* 3) Mobile: stack columns */
+@media (max-width: 900px) {
+  .two-col .page__content .two-col-wrap {
     grid-template-columns: 1fr;
-  }
-  .sidebar {
-    width: auto;
-    padding-left: 0;
-  }
-  .content-onecol,
-  .content-twocol {
-    margin-left: 0;
-    margin-right: 0;
   }
 }
