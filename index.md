@@ -2,10 +2,11 @@
 layout: single
 title: Home
 author_profile: true
+classes: wide-tight two-col
 ---
 
-<div class="content-twocol">
-  <div class="text">
+<div class="two-col-wrap">
+  <div class="two-col-text">
     <h2>Or Hadas</h2>
     <p>
       I am an atmospheric scientist studying midlatitude climate dynamics, with a focus on interactions across spatial and temporal scales.
@@ -16,7 +17,7 @@ author_profile: true
     </p>
   </div>
 
-  <div class="visual">
-    <img src="{{ site.baseurl }}/assets/img/20176F053.jpg" alt="Or Hadas">
+  <div class="two-col-media">
+    <img src="{{ '/assets/img/20176F053.jpg' | relative_url }}" alt="Or Hadas">
   </div>
 </div>
