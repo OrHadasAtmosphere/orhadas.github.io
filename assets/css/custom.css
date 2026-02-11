@@ -1,3 +1,19 @@
+/* Make page use full width when sidebar is on the left */
+.page {
+  max-width: 100% !important;
+}
+
+/* Expand content area */
+.page__inner-wrap {
+  max-width: 100% !important;
+  width: 95%;
+}
+
+/* Make main column wider */
+.page__content {
+  width: 100% !important;
+}
+
 /* 1) Wide content + small margins (apply by adding `classes: wide-tight` in front matter) */
 .wide-tight .page__inner-wrap,
 .wide-tight .initial-content,
