@@ -6,7 +6,7 @@
    ========================================= */
 /* Reduce left padding in sidebar */
 .sidebar {
-  padding-left: 10px;   /* try 0px–15px */
+  padding-left: 0px;   /* try 0px–15px */
 }
 
 /* Reduce inner padding around profile block */
