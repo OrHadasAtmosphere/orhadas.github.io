@@ -1,24 +1,17 @@
-/* Make page use full width when sidebar is on the left */
-.page {
+/* =========================
+   WIDE PAGES (opt-in)
+   Add in front matter:
+   classes: wide-tight
+   ========================= */
+
+.wide-tight .page {
   max-width: 100% !important;
 }
 
-/* Expand content area */
-.page__inner-wrap {
-  max-width: 100% !important;
-  width: 95%;
-}
-
-/* Make main column wider */
-.page__content {
-  width: 100% !important;
-}
-
-/* 1) Wide content + small margins (apply by adding `classes: wide-tight` in front matter) */
 .wide-tight .page__inner-wrap,
 .wide-tight .initial-content,
 .wide-tight .page__content {
-  max-width: 1600px;   /* make bigger/smaller if you want */
+  max-width: 2000px;   /* change this number if you want even wider */
   width: 96%;
 }
 
@@ -27,10 +20,17 @@
   padding-right: 0.5rem;
 }
 
-/* 2) Two-column block (apply by adding `classes: two-col` AND using the HTML wrapper in the page) */
+/* =========================
+   TWO COLUMN BLOCK (opt-in)
+   Add in front matter:
+   classes: two-col
+   And use:
+   <div class="two-col-wrap"> ... </div>
+   ========================= */
+
 .two-col .page__content .two-col-wrap {
   display: grid;
-  grid-template-columns: 1.2fr 1fr; /* text column, image column */
+  grid-template-columns: 1.2fr 1fr; /* text, image */
   gap: 1.25rem;
   align-items: start;
 }
@@ -41,7 +41,6 @@
   display: block;
 }
 
-/* 3) Mobile: stack columns */
 @media (max-width: 900px) {
   .two-col .page__content .two-col-wrap {
     grid-template-columns: 1fr;
