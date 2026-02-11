@@ -1,190 +1,92 @@
-/* DEBUG: confirms custom.css is loading */
-/* body { border-top: 8px solid red; }  <-- keep commented or remove */
+/* ===== Site layout: sidebar + content column ===== */
 
-/* =========================================
-   1) Widen + center the site (all pages)
-   ========================================= */
-/* Reduce left padding in sidebar */
-.sidebar {
-  padding-left: 0px;   /* try 0px–15px */
-}
-
-/* Reduce inner padding around profile block */
-.sidebar__inner {
-  padding-left: 0px;
-}
-
-/* Sidebar column width */
-.sidebar {
- width: 200px;   /* try 220–260px */
-}
-
-.masthead__inner-wrap,
-.initial-content {
+.initial-content,
+.masthead__inner-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
   width: 100%;
-  max-width: 1500px;   /* adjust this single number if you want overall width wider/narrower */
-  margin-left: auto;
-  margin-right: auto;
+  box-sizing: border-box;
 }
 
-/* Let theme control text sizing; do not override font-size here */
+/* Sidebar sizing */
+.sidebar {
+  width: 220px;           /* change 200-260px as desired */
+  padding-left: 8px;
+}
+.sidebar__inner {
+  padding-left: 6px;
+}
+
+/* Page grid: sidebar | main content */
+@media (min-width: 1024px) {
+  .page {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 36px;
+  }
+}
+
+/* Ensure content column is free to use full width */
 .page__content {
   max-width: none;
 }
 
-/* Optional: keep sidebar reasonable */
-.sidebar__inner {
-  max-width: 320px;
+/* ===== Content styles you can use inside the main column ===== */
+
+/* One-column text block */
+.content-onecol {
+  max-width: 900px;
+  margin: 0 0 28px 0;
+  padding-right: 6px;
 }
 
-/* =========================================
-   2) Homepage two-column layout (only on index.md)
-   ========================================= */
-
-.home-two-col {
+/* Two-column block: left text, right image */
+.content-twocol {
   display: grid;
-  grid-template-columns: 1.6fr 1fr;
-  gap: 32px;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 28px;
   align-items: center;
-  margin-top: 12px;
-
-  max-width: 1100px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 12px;
-  padding-right: 12px;
+  margin: 0 0 28px 0;
 }
 
-.home-col-photo img {
+/* Reverse variant (image left, text right) */
+.content-twocol.reverse {
+  grid-template-columns: 1fr 1.4fr;
+}
+
+/* Two-column image styling */
+.content-twocol img {
   width: 100%;
-  max-width: 440px;
   height: auto;
-  border-radius: 18px;
+  max-width: 520px;
+  border-radius: 12px;
   display: block;
 }
 
-/* Mobile: stack */
-@media (max-width: 900px) {
-  .home-two-col {
-    grid-template-columns: 1fr;
-    max-width: 100%;
-  }
-
-  .page__content {
-    max-width: 100%;
-  }
-
-  .masthead__inner-wrap,
-  .initial-content {
-    max-width: 100%;
-  }
-}
-
-/* ======= Full-bleed research sections (edge-to-edge) ======= */
-/* This pulls the section out of the centered container so it spans the viewport */
-.research-section {
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  width: 100vw;
-  box-sizing: border-box;
-  padding: 40px 24px; /* vertical and small horizontal padding for breathing room */
-  background: transparent; /* change if you want a subtle background */
-}
-
-/* ======= Block layout (less dense) ======= */
-.research-block {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 40px;
-  align-items: center;
-  padding: 40px 0;
-  border-bottom: 1px solid #efefef;
-  max-width: 1200px;    /* keeps content column readable on very wide screens */
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Alternate the visual/text order cleanly */
-.research-block.reverse {
-  grid-template-columns: 1fr 1.2fr;
-}
-.research-block.reverse .research-content {
-  order: 2;
-}
-.research-block.reverse .research-visual {
-  order: 1;
-}
-
-/* ======= Use theme typography (no font-size overrides) ======= */
-/* We keep spacing only; font sizes remain uniform across the site */
-/* Keep headings' spacing tidy */
-.research-content h2 {
-  margin-bottom: 12px;
-  line-height: 1.25;
-}
-
-/* Paragraph spacing; font-size inherits from theme */
-.research-content p {
-  margin-bottom: 12px;
+/* Keep text readable */
+.content-onecol p,
+.content-twocol .text {
+  margin-bottom: 1rem;
+  line-height: 1.6;
   color: #222;
-  max-width: 720px;     /* limit line length for readability */
 }
 
-/* ======= Image adjustments ======= */
-.research-visual img {
-  width: 100%;
-  max-width: 420px;
-  border-radius: 14px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* ======= Responsive: stack and maintain padding ======= */
-@media (max-width: 1000px) {
-  .research-section {
-    padding-left: 18px;
-    padding-right: 18px;
+/* Responsive: stack on small screens */
+@media (max-width: 1023px) {
+  .page {
+    display: block;
   }
-
-  .research-block,
-  .research-block.reverse {
+  .content-twocol,
+  .content-twocol.reverse {
     grid-template-columns: 1fr;
-    gap: 24px;
-    padding: 28px 0;
   }
-
-  .research-block.reverse .research-content,
-  .research-block.reverse .research-visual {
-    order: unset;
+  .sidebar {
+    width: auto;
+    padding-left: 0;
   }
-
-  .research-content h2 {
-    /* keep the theme's responsive sizing; avoid setting font-size */
-    line-height: 1.2;
+  .content-onecol,
+  .content-twocol {
+    margin-left: 0;
+    margin-right: 0;
   }
-
-  .research-content p {
-    max-width: 100%;
-  }
-
-  .research-visual img {
-    max-width: 100%;
-  }
-}
-
-.initial-content {
-  max-width: 1200px;   /* try 1100–1300px */
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.masthead__inner-wrap {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
 }
