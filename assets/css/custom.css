@@ -1,3 +1,8 @@
+/* Global font size reduction */
+html {
+  font-size: 15px;   /* default is usually 16px */
+}
+
 /* =========================
    WIDE PAGES (opt-in)
    Add in front matter:
